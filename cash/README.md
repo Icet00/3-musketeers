@@ -1,6 +1,13 @@
 # cash
 
-# Installation
+**Table of Contents**
+
+- [Installation](#Installation)
+- [Utilisation](#Utilisation)
+  - [Index.js](#Index.js)
+  - [Currencies](#tdd)
+
+## Installation
 
 Having already install npm(https://docs.npmjs.com/getting-started/installing-node);
 
@@ -8,16 +15,16 @@ Having already install npm(https://docs.npmjs.com/getting-started/installing-nod
 npm install
 ```
 
-# Utilisation
+## Utilisation
 
-## Index.js
+### Index.js
 
 Launch the executable with the first currencies being the currencies of the amount
 ```
 node bin/index.js <amount> <currencies_abbrevation>
 ```
 
-Example
+#### Example :
 ```
 node bin/index.js 1 usd eur cad
 ```
@@ -32,7 +39,7 @@ Save in your temp local file your favorite currencies. With the first being the 
 node bin/index.js --save <currencies_abbrevation>
 ```
 
-Example :
+#### Example :
 Save 3 currencies
 ```
 node bin/index.js --save usd eur cad
@@ -48,7 +55,7 @@ node bin/index.js 1 eur
 ```
 Will return the value in the eur and cad currencies from eur
 
-# Currencies
+## Currencies
 
 Each currencies are stored in lib/currencies.json. They are 32 differents currencies. They can be written in capital letter or normal letter.
 
