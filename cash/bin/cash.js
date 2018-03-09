@@ -7,6 +7,12 @@ const currencies = require('../lib/currencies.json');
 
 const API = 'https://api.fixer.io/latest';
 
+/**
+ * Convert the money from amount to each currencies asked whose are stored in the currencies.json
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
 
@@ -24,8 +30,6 @@ const convert = configuration => {
       loading.warn(`${chalk.yellow(` The ${item} currency not found `)}`);
     }
   });
-
-  console.log();
   console.log(
     chalk.underline.gray(
       ` Conversion of ${chalk.bold(from)} ${chalk.bold(amount)}`
@@ -33,6 +37,13 @@ const convert = configuration => {
   );
   process.exit(1);
 };
+
+/**
+ * Async command to load the 
+ * @constructor
+ * @param {string} title - The title of the book.
+ * @param {string} author - The author of the book.
+ */
 
 const cash = async command => {
   const amount = command.amount;
