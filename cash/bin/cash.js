@@ -9,9 +9,6 @@ const API = 'https://api.fixer.io/latest';
 
 /**
  * Convert the money from amount to each currencies asked whose are stored in the currencies.json
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
  */
 const convert = configuration => {
   const {amount, to, from, response, loading} = configuration;
@@ -39,10 +36,7 @@ const convert = configuration => {
 };
 
 /**
- * Async command to load the 
- * @constructor
- * @param {string} title - The title of the book.
- * @param {string} author - The author of the book.
+ * Async command to load the right currencies
  */
 
 const cash = async command => {

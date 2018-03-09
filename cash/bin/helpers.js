@@ -10,7 +10,6 @@ updateNotifier({pkg}).notify();
 
 /**
  * Save the selected currencies
- *
  */
 const saveCurrencies = argv => {
   config.set('defaultFrom', argv[1] || config.get('defaultFrom', 'USD'));
@@ -31,7 +30,6 @@ const version = () => {
 
 /**
  *Get the input of the command line and launch the correct function
- *
  */
 
 const help = () => {
@@ -68,7 +66,6 @@ Examples:
 
 /**
  *Switch the argument function
- *
  */
 
 const helpers = argv => {

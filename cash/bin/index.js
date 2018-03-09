@@ -12,7 +12,6 @@ helpers(argv);
 
 /**
  *Redirect the command
- *
  */
 
 const command = {

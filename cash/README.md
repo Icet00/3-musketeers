@@ -2,14 +2,14 @@
 
 **Table of Contents**
 
-- [Installation](#Installation)
-- [Utilisation](#Utilisation)
-  - [Index.js](#Index.js)
-  - [Currencies](#tdd)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+  - [Index.js](#index.js)
+  - [Currencies](#currencies)
 
 ## Installation
 
-Having already install [npm](https://docs.npmjs.com/getting-started/installing-node);
+Having already install [npm](https://docs.npmjs.com/getting-started/installing-node), and use this command.
 
 ```
 npm install
