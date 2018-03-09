@@ -4,7 +4,7 @@
 
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-  - [Index.js](#index.js)
+  - [Index.js](#index)
   - [Currencies](#currencies)
 
 ## Installation
@@ -17,7 +17,7 @@ npm install
 
 ## Utilisation
 
-### Index.js
+### Index
 
 Launch the executable with the first currencies being the currencies of the amount
 ```
