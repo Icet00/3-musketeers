@@ -9,7 +9,7 @@
 
 ## Installation
 
-Having already install npm(https://docs.npmjs.com/getting-started/installing-node);
+Having already install [npm](https://docs.npmjs.com/getting-started/installing-node);
 
 ```
 npm install
