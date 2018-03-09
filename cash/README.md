@@ -1,4 +1,4 @@
-# cash
+# Cash
 
 **Table of Contents**
 
@@ -45,6 +45,7 @@ Save 3 currencies
 node bin/index.js --save usd eur cad
 ```
 
+And use the command line to tap
 ```
 node bin/index.js 1
 ```
