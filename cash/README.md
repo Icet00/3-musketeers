@@ -4,7 +4,7 @@
 
 - [Installation](#installation)
 - [Utilisation](#utilisation)
-  - [Index.js](#index)
+  - [Index](#index)
   - [Currencies](#currencies)
 
 ## Installation
