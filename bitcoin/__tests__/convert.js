@@ -3,11 +3,102 @@
 const convert = require('..');
 const Big = require('big.js');
 
-test('should default to returning a Number', () => {
-  //convert(2, 'BTC', 'BTC');
-  throw new Error('test not yet defined... write your test here');
+test('should convert Bitcoin to Bitcoin', () => {
+  var value = convert(2, 'BTC', 'BTC');
+  expect(value).toBe(2);
 });
 
+test('should convert null to Bitcoin', () => {
+  function convertTo()
+  {
+    convert(2, null, 'BTC');
+  }
+  
+  expect(convertTo).toThrowError();
+});
+
+test('should convert Bitcoin to null', () => {
+  function convertTo()
+  {
+    convert(2, 'BTC', null);
+  }
+  
+  expect(convertTo).toThrowError();
+});
+
+test('should convert Bitcoin to Bitcoin with representaion Number', () => {
+  var value = convert(2, 'BTC', 'BTC', 'Number');
+  expect(value).toBe(2);
+});
+
+test('should convert Bitcoin to Bitcoin with representaion Big', () => {
+  var value = convert(2, 'BTC', 'BTC', 'Big');
+  expect(value).toEqual(Big(2));
+});
+
+test('should convert Bitcoin to Bitcoin with representaion String', () => {
+  var value = convert(2, 'BTC', 'BTC', 'String');
+  expect(value).toBe("2");
+});
+
+test('should convert null from Bitcoin to Bitcoin', () => {
+  let value = convert(NaN, 'BTC', 'BTC');
+  expect(value).toBe(NaN);
+});
+
+test('should convert null from Bitcoin to Bitcoinwith representaion Big', () => {
+  function convertTo()
+  {
+    convert(NaN, 'BTC', 'BTC', 'Big');
+  }
+  expect(convertTo).toThrowError();
+});
+
+test('should convert null from Bitcoin to Bitcoinwith representaion String', () => {
+  let value = convert(NaN, 'BTC', 'BTC', 'String');
+  expect(value).toBe("NaN");
+
+});
+
+test('should add a prefix', () => {
+  let unit = "abc";
+  convert.addUnit(unit,0.5);
+  let units = convert.units();
+  let length = units.length;
+  expect(units.indexOf(unit)).toBe(6);
+  expect(length).toBe(7);
+});
+
+test('should add a already existing prefix', () => {
+  let unit = "abc";
+  function addAlreadyAddedUnitWithDifferentRate() {
+      convert.addUnit(unit,2);
+    }
+
+  expect(addAlreadyAddedUnitWithDifferentRate).toThrowError();
+});
+
+test('should delete a prefix', () => {
+  let unit = "abc";
+  convert.removeUnit(unit);
+  let units = convert.units();
+  expect(units.indexOf(unit)).toBe(-1);
+  let length = units.length;
+  expect(length).toBe(6);
+});
+
+test('should delete a predefined prefix', () => {
+  let unit = "BTC";
+  
+  function removePredefinedUnit() {
+    convert.removeUnit(unit);
+  }
+  // Test the exact error message
+  expect(removePredefinedUnit).toThrowError();
+});
+
+
+/*
 test('should return a Number', () => {
   //convert(2, 'BTC', 'BTC', 'Number');
   throw new Error('test not yet defined... write your test here');
@@ -85,3 +176,4 @@ test('should allow untest aliases', () => {
   //convert(4.6, 'μBTC', 'btest');
   throw new Error('test not yet defined... write your test here');
 });
+*/

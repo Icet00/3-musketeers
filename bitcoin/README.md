@@ -8,6 +8,14 @@
   [String](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String)
 - Units can be added or removed
 
+## Prerequisite
+
+Having already install [npm](https://docs.npmjs.com/getting-started/installing-node), and use this command.
+
+```
+npm install
+```
+
 ## Getting started
 
 ```
